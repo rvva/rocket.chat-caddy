@@ -24,7 +24,7 @@ Run docker compose inside rocket.chat working directory:
 cd /srv/rocket.chat-caddy/rocket.chat/
 docker-compose up --build -d
 ```
-## 3. Setup Caddy reverse proxy with Let's Encrypt or self signed certificate.
+## 3. Setup Caddy reverse proxy with Let's Encrypt, ZeroSSL or self signed certificate.
 Go to caddy working directory and edit Caddyfile.
 ```bash
 nano /srv/rocket.chat-caddy/caddy/Caddyfile
@@ -71,6 +71,5 @@ docker logs -f rocker.chat-hubot
 docker logs -f rocker.chat-mongo
 
 ```
-
-
-
+## 6. Set up in 3 minutes. 
+[![Rocket.chat and Caddy in 3 minutes](https://i.ytimg.com/vi/b-snyz6BfRk/hqdefault.jpg)](https://www.youtube.com/watch?v=b-snyz6BfRk&)
