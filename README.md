@@ -1,4 +1,4 @@
-# Rocker.chat and Caddy as reverse proxy
+# Rocker.chat and Caddy as reverse proxy with docker
 
 ## 0. Requirements:
 * own domain associated with the A/AAA record in DNS,
