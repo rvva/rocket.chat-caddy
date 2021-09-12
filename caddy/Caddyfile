@@ -5,9 +5,18 @@
     # Optional staging lets encrypt for testing. Comment out for production.
     # acme_ca https://acme-staging-v02.api.letsencrypt.org/directory
 }
-mydomain.pl {
+chat.mydomain.pl {
     reverse_proxy 192.168.0.22:3000
     # If you want to use self signed certifiacate insted Let's Encrypt uncomment section tls inernal
     # tls internal
+
+    log {
+        output file /var/log/chat-access.log {
+            roll_size 50mb
+            roll_keep 10
+            roll_keep_for 720h
+        } 
+    }
+
 }
 
