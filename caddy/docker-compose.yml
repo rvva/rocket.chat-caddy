@@ -11,6 +11,7 @@ services:
                         - ./Caddyfile:/etc/caddy/Caddyfile
                         - ./data/:/data
                         - ./config:/config
+                        - ./log:/var/log/
                 networks:
                         - localhost
 networks:
