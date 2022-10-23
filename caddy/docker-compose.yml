@@ -1,20 +1,21 @@
 version: "3.7"
 services:
-        caddy:
-                image: caddy:latest
-                container_name: caddy
-                restart: always
-                ports:
-                        - "80:80"
-                        - "443:443"
-                volumes:
-                        - ./Caddyfile:/etc/caddy/Caddyfile
-                        - ./data/:/data
-                        - ./config:/config
-                        - ./log:/var/log/
-                networks:
-                        - localhost
+  caddy:
+    image: caddy:latest
+    container_name: caddy
+    restart: always
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile
+      - ./data/:/data
+      - ./config:/config
+      - ./log:/var/log/
+    networks:
+      - internal
+
 networks:
     localhost:
-        name: localhost
+        name: internal
         external: false

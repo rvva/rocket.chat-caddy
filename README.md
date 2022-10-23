@@ -11,14 +11,14 @@ Clone repository to your working directory. I prefer /srv to this.
 cd /srv
 git clone https://github.com/rvva/rocket.chat-caddy 
 ```
-## 2. Run rocket.chat.
+## 1a. [OPTIONAL] Customize docker-compose to suit your requirements
 Go to rocket-chat working directory and edit *docker-compose.yml* with your favorite text editor. 
 ```bash
-nano /srv/rocket.chat-caddy/rocket.chat/docker-compose.yml
+vim /srv/rocket.chat-caddy/rocket.chat/docker-compose.yml
 ```
-Edit *ROCKETCHAT_PASSWORD* envarioment variable. 
-Editing other variables is not required - it is optional.
+Editing variables is not required - it is optional.
 
+## 2. Run RocketChat
 Run docker compose inside rocket.chat working directory:
 ```bash
 cd /srv/rocket.chat-caddy/rocket.chat/
@@ -27,7 +27,7 @@ docker-compose up --build -d
 ## 3. Setup Caddy reverse proxy with Let's Encrypt, ZeroSSL or self signed certificate.
 Go to caddy working directory and edit Caddyfile.
 ```bash
-nano /srv/rocket.chat-caddy/caddy/Caddyfile
+vim /srv/rocket.chat-caddy/caddy/Caddyfile
 ```
 Things you need to edit:
 * email my@email.com to your valid email,
@@ -66,9 +66,8 @@ docker exec -it caddy caddy reload --config /etc/caddy/Caddyfile
 Remember logs are your friends. Check them if there are any problems.
 ```bash
 docker logs -f caddy
-docker logs -f rocker.chat-www
-docker logs -f rocker.chat-hubot
-docker logs -f rocker.chat-mongo
+docker logs -f rockerchat-www
+docker logs -f rockerchat-db
 
 ```
 ## 6. Set up in 3 minutes. 
