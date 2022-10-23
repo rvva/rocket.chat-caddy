@@ -66,9 +66,8 @@ docker exec -it caddy caddy reload --config /etc/caddy/Caddyfile
 Remember logs are your friends. Check them if there are any problems.
 ```bash
 docker logs -f caddy
-docker logs -f rocker.chat-www
-docker logs -f rocker.chat-hubot
-docker logs -f rocker.chat-mongo
+docker logs -f rockerchat-www
+docker logs -f rockerchat-db
 
 ```
 ## 6. Set up in 3 minutes. 
