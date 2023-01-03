@@ -16,6 +16,6 @@ services:
       - internal
 
 networks:
-    localhost:
+    internal:
         name: internal
         external: false
