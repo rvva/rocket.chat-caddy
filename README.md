@@ -32,7 +32,7 @@ vim /srv/rocket.chat-caddy/caddy/Caddyfile
 Things you need to edit:
 * email my@email.com to your valid email,
 * mydomain.pl to your domain for rocket.chat,
-* reverse_proxy 192.168.0.22:3000 to your local machine address (port 3000 is default for rocket.chat).
+* reverse_proxy 192.168.0.22:3000 point your local machine address (port 3000 is default for rocket.chat). You can check your local ip adress by command ```hostname -I | awk '{ print $1 }'```
 
 Another example:
 ```bash
